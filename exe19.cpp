@@ -9,8 +9,8 @@ int main()
     ofstream out;
     out.open("rough2.cpp");
     
-    out << "Panchar putram" << endl;
-    out << "Kabhi na mitram"<< endl;
+    out << "Hello everyone..." << endl;
+    out << "Myself Pankaj"<< endl;
 
     out.close();
     return 0;
