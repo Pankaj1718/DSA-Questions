@@ -1,16 +1,19 @@
-#include<iostream>
+#include <iostream>
+#include <fstream>
+#include <string>
 using namespace std;
+
 int main()
 {
-    int n;
-    cout<<"Enter the value of n "<<endl;
-    cin>>n;
-    int ans=0;
-    for (int i = 1; i <= n; i++)
+    ifstream in;
+    string s;
+    in.open("xyz.cpp");
+
+    while (in.eof() == 0)
     {
-        ans=ans+i;
+        getline(in, s);
+        cout << s <<endl;
     }
-    cout<<"The sum is : "<<ans;
-    
+    in.close();
     return 0;
 }
