@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+class gain
+{
+    int salary;
+    int spend;
+
+public:
+    void setdata(int s, int e)
+    {
+        salary = s;
+        spend = e;
+    }
+    int totalgain(gain o1, gain o2)
+    {
+        salary = o1.salary + o2.salary;
+        spend = o1.spend + o2.spend;
+    }
+
+    void printgain(void)
+    {
+        int profit = salary - spend;
+        cout << " the gain is " << profit << endl;
+    }
+};
+int main()
+{
+    gain pankaj, chetan, sum;
+    pankaj.setdata(22000, 20000);
+    pankaj.printgain();
+
+    chetan.setdata(16000, 15000);
+    chetan.printgain();
+
+    sum.totalgain(pankaj, chetan);
+    sum.printgain();
+
+    return 0;
+}
