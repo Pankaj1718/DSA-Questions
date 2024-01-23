@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+class shop{
+       string name[100];
+       int price[100];
+        int i=1;
+    public:
+       void setdata(void);
+       void getdata(void);
+      
+};
+
+void shop :: setdata(void){
+   
+    cout<<"Enter the item name "<<endl;
+    cin>>name[i];
+    cout<<"Enter the price of the item "<<endl;
+    cin>>price[i];
+    i ++;
+}
+void shop :: getdata(void){
+    for (int a = 1; a < i ; a++)
+    {
+       cout<<"The price of "<<name[a]<<" is "<<price[a]<<endl; 
+    }
+    
+    
+}
+int main()
+{
+    shop kirana;
+    kirana.setdata();
+    kirana.setdata();
+    kirana.setdata();
+    kirana.setdata();
+    kirana.getdata();
+    return 0;
+}
